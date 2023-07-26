@@ -10,7 +10,7 @@ namespace hamzITech.NewFolder1
 {
     public static class DatabaseConnection
     {
-        static string ConnectionString = "Data Source=DESKTOP-M3H7L83;Initial Catalog=Pharma_2022;Integrated Security=True";
+        static string ConnectionString = "Data Source=.;Initial Catalog=PMS;Integrated Security=True";
         
 
 

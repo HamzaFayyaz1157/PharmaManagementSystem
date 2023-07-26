@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using hamzITech.NewFolder1;
+using hamzITech.Project.serverLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,19 +15,36 @@ namespace hamzITech.FormProject.Purchase.Purchase
 {
     public partial class Purchase : DevExpress.XtraEditors.XtraForm
     {
+
+
+        PurchaseService purchaseService = new PurchaseService();
         public Purchase()
         {
             InitializeComponent();
             Loadddl();
-        }
-
-        private void dateEdit1_EditValueChanged(object sender, EventArgs e)
-        {
+            LoadId();
+            txtdate.Text = DateTime.Now.Date.ToString();
 
         }
 
-        private void labelControl1_Click(object sender, EventArgs e)
+        
+
+        public void LoadId()
         {
+            
+            var    response = purchaseService.GetId();
+                //txtItemId.Text = response.obj.ToString();
+            if (response.LogLevel.ToString() == "Error")
+            {
+                MessageBox.Show(response.obj.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                txtIPurchaseId.Text = response.obj.ToString();
+            }
+            
+
 
         }
 
@@ -38,7 +56,10 @@ namespace hamzITech.FormProject.Purchase.Purchase
             ddlVendor.Properties.DisplayMember = "Description";
             ddlVendor.Properties.ValueMember = "VendorId";
 
-            //DataSet Catagory = DatabaseConnection.SeclectQuery("select [CategoryId],[Description] from Setup.Category");
+
+
+            DataSet Product = DatabaseConnection.SeclectQuery("select ItemId,Description,RetailPrice,PurchaseDiscount from Setup.Item");
+            repositoryItemSearchLookUpEdit1.DataSource = Product.Tables[0];
             //ddlCatagory.Properties.DataSource = Catagory.Tables[0];
             //ddlCatagory.Properties.DisplayMember = "Description";
             //ddlCatagory.Properties.ValueMember = "CategoryId";

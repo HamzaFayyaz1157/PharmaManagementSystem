@@ -16,7 +16,7 @@ namespace hamzITech.Project.serverLayer
     public class ItemService : Iitem
     {
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-M3H7L83;Initial Catalog=Pharma_2022;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=PMS;Integrated Security=True");
 
 
 
@@ -108,7 +108,7 @@ namespace hamzITech.Project.serverLayer
             int ID = 0;
             
             con.Open();
-            SqlCommand cmd = new SqlCommand("select top 1, ItemId from Setup.Item order by ItemId Desc ", con);
+            SqlCommand cmd = new SqlCommand("select top 1 ItemId from Setup.Item order by ItemId Desc ", con);
             SqlDataReader da = cmd.ExecuteReader();
 
             if (da.Read())

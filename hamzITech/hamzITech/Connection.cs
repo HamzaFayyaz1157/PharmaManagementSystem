@@ -14,7 +14,7 @@ namespace hamzITech
         public void Connect()
         {
 
-            Con = new SqlConnection("Data Source=DESKTOP-M3H7L83;Initial Catalog=Pharma_2022;Integrated Security=True");
+            Con = new SqlConnection("Data Source=.;Initial Catalog=PMS;Integrated Security=True");
         }
     }
 }

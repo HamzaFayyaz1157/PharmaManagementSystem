@@ -14,7 +14,7 @@ namespace hamzITech.Project.serverLayer
     {
         //Connection con = new Connection();
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-M3H7L83;Initial Catalog=Pharma_2022;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=PMS;Integrated Security=True");
 
 
 
