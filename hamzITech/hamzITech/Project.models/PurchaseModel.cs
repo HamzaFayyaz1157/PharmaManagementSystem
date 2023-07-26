@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace hamzITech.Project.models
 {
-    public class ItemModel : BaseModel
+    public class PurchaseModel : BaseModel
     {
-        public int ItemId { get; set; }
+        public int PurchaseId { get; set; }
         public int? PakingTypeId { get; set; }
         public int StoreId { get; set; }
         public int? CategoryId { get; set; }
@@ -22,10 +22,6 @@ namespace hamzITech.Project.models
         public int? CompanyId { get; set; }
         public string Description { get; set; }
         public decimal? RetailPrice { get; set; }
-        public decimal? SaleTax { get; set; }
-        public decimal? AdditionTax { get; set; }
-        public decimal? PurchaseTax { get; set; }
-        public int? AltCode { get; set; }
         public decimal? TradePrice { get; set; }
         public int? IsDiscount { get; set; }
         public decimal? PurchaseDiscount { get; set; }

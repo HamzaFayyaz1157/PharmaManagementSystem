@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using hamzITech.NewFolder1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
         public Purchase()
         {
             InitializeComponent();
+            Loadddl();
         }
 
         private void dateEdit1_EditValueChanged(object sender, EventArgs e)
@@ -25,6 +27,31 @@ namespace hamzITech.FormProject.Purchase.Purchase
 
         private void labelControl1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        public void Loadddl()
+        {
+
+            DataSet Vendor = DatabaseConnection.SeclectQuery("select[VendorId],[Description] from Setup.Vendor");
+            ddlVendor.Properties.DataSource = Vendor.Tables[0];
+            ddlVendor.Properties.DisplayMember = "Description";
+            ddlVendor.Properties.ValueMember = "VendorId";
+
+            //DataSet Catagory = DatabaseConnection.SeclectQuery("select [CategoryId],[Description] from Setup.Category");
+            //ddlCatagory.Properties.DataSource = Catagory.Tables[0];
+            //ddlCatagory.Properties.DisplayMember = "Description";
+            //ddlCatagory.Properties.ValueMember = "CategoryId";
+
+            //DataSet Store = DatabaseConnection.SeclectQuery("select [StoreId],[Description] from Setup.Store");
+            //ddlStore.Properties.DataSource = Store.Tables[0];
+            //ddlStore.Properties.DisplayMember = "Description";
+            //ddlStore.Properties.ValueMember = "StoreId";
+
+            //DataSet PackingType = DatabaseConnection.SeclectQuery("select [packingtypeId],[Description] from Setup.PackingType");
+            //ddlPackingType.Properties.DataSource = PackingType.Tables[0];
+            //ddlPackingType.Properties.DisplayMember = "Description";
+            //ddlPackingType.Properties.ValueMember = "packingtypeId";
 
         }
     }

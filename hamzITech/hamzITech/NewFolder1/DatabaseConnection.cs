@@ -11,7 +11,7 @@ namespace hamzITech.NewFolder1
     public static class DatabaseConnection
     {
         static string ConnectionString = "Data Source=DESKTOP-M3H7L83;Initial Catalog=Pharma_2022;Integrated Security=True";
-
+        
 
 
         public static DataSet SeclectQuery(string query)
@@ -41,15 +41,25 @@ namespace hamzITech.NewFolder1
         }
 
 
-        public static void InSert(string query)
+        public static void InSert(String InsertQury)
         {
             try
             {
-
+                int insertCount = 0;
+                string msg = "";
                 SqlConnection objConnection = new SqlConnection(ConnectionString);
-                SqlCommand cmd = new SqlCommand(query,objConnection);
+                SqlCommand cmd = new SqlCommand(InsertQury,objConnection);
                 objConnection.Open();
-                cmd.ExecuteNonQuery();
+                insertCount = cmd.ExecuteNonQuery();
+                if (insertCount > 0)
+                {
+                    msg = "Inserted Successfully";
+                }
+                else
+                    msg = "Something is wrong";
+
+
+
                 objConnection.Close();
 
 

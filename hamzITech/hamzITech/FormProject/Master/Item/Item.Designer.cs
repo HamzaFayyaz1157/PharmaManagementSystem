@@ -30,25 +30,30 @@ namespace hamzITech.FormProject
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
             this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtShelf = new DevExpress.XtraEditors.TextEdit();
             this.txtDiscount = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtreorderQty = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtPurchaseDiscount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAltCode = new DevExpress.XtraEditors.TextEdit();
             this.txtStripQty = new DevExpress.XtraEditors.TextEdit();
             this.txtCortonQty = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAdditionTax = new DevExpress.XtraEditors.TextEdit();
             this.txttradePrice = new DevExpress.XtraEditors.TextEdit();
             this.ddlPackingType = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -58,6 +63,8 @@ namespace hamzITech.FormProject
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.ddlCatagory = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtPurchaseTax = new DevExpress.XtraEditors.TextEdit();
+            this.txtSaleTax = new DevExpress.XtraEditors.TextEdit();
             this.txtretailPrice = new DevExpress.XtraEditors.TextEdit();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
             this.txtItemId = new DevExpress.XtraEditors.TextEdit();
@@ -102,8 +109,10 @@ namespace hamzITech.FormProject
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtreorderQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchaseDiscount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAltCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStripQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCortonQty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdditionTax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttradePrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlPackingType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -111,6 +120,8 @@ namespace hamzITech.FormProject
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlCatagory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPurchaseTax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleTax.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtretailPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemId.Properties)).BeginInit();
@@ -161,24 +172,32 @@ namespace hamzITech.FormProject
             // 
             this.panelControl1.Controls.Add(this.txtShelf);
             this.panelControl1.Controls.Add(this.txtDiscount);
+            this.panelControl1.Controls.Add(this.labelControl18);
+            this.panelControl1.Controls.Add(this.labelControl17);
             this.panelControl1.Controls.Add(this.labelControl13);
             this.panelControl1.Controls.Add(this.labelControl14);
+            this.panelControl1.Controls.Add(this.labelControl16);
             this.panelControl1.Controls.Add(this.txtreorderQty);
             this.panelControl1.Controls.Add(this.labelControl9);
             this.panelControl1.Controls.Add(this.labelControl11);
+            this.panelControl1.Controls.Add(this.labelControl15);
             this.panelControl1.Controls.Add(this.txtPurchaseDiscount);
             this.panelControl1.Controls.Add(this.labelControl10);
             this.panelControl1.Controls.Add(this.labelControl12);
+            this.panelControl1.Controls.Add(this.txtAltCode);
             this.panelControl1.Controls.Add(this.txtStripQty);
             this.panelControl1.Controls.Add(this.txtCortonQty);
             this.panelControl1.Controls.Add(this.labelControl8);
             this.panelControl1.Controls.Add(this.labelControl7);
+            this.panelControl1.Controls.Add(this.txtAdditionTax);
             this.panelControl1.Controls.Add(this.txttradePrice);
             this.panelControl1.Controls.Add(this.ddlPackingType);
             this.panelControl1.Controls.Add(this.labelControl6);
             this.panelControl1.Controls.Add(this.ddlStore);
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.ddlCatagory);
+            this.panelControl1.Controls.Add(this.txtPurchaseTax);
+            this.panelControl1.Controls.Add(this.txtSaleTax);
             this.panelControl1.Controls.Add(this.txtretailPrice);
             this.panelControl1.Controls.Add(this.txtDescription);
             this.panelControl1.Controls.Add(this.txtItemId);
@@ -189,12 +208,12 @@ namespace hamzITech.FormProject
             this.panelControl1.Controls.Add(this.ddlCompany);
             this.panelControl1.Location = new System.Drawing.Point(4, 29);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(591, 149);
+            this.panelControl1.Size = new System.Drawing.Size(591, 181);
             this.panelControl1.TabIndex = 0;
             // 
             // txtShelf
             // 
-            this.txtShelf.Location = new System.Drawing.Point(246, 120);
+            this.txtShelf.Location = new System.Drawing.Point(246, 151);
             this.txtShelf.Name = "txtShelf";
             this.txtShelf.Properties.BeepOnError = false;
             this.txtShelf.Size = new System.Drawing.Size(53, 20);
@@ -202,7 +221,7 @@ namespace hamzITech.FormProject
             // 
             // txtDiscount
             // 
-            this.txtDiscount.Location = new System.Drawing.Point(501, 120);
+            this.txtDiscount.Location = new System.Drawing.Point(501, 151);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -210,15 +229,33 @@ namespace hamzITech.FormProject
             this.txtDiscount.Properties.Items.AddRange(new object[] {
             "No",
             "Yes"});
-            this.txtDiscount.Size = new System.Drawing.Size(71, 20);
+            this.txtDiscount.Size = new System.Drawing.Size(73, 20);
             this.txtDiscount.TabIndex = 13;
             this.txtDiscount.SelectedValueChanged += new System.EventHandler(this.txtDiscount_SelectedValueChanged);
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Appearance.Options.UseFont = true;
+            this.labelControl18.Location = new System.Drawing.Point(28, 126);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(41, 13);
+            this.labelControl18.TabIndex = 22;
+            this.labelControl18.Text = "Sale Tax";
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(166, 126);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(68, 13);
+            this.labelControl17.TabIndex = 21;
+            this.labelControl17.Text = "Additional Tax";
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(4, 123);
+            this.labelControl13.Location = new System.Drawing.Point(4, 154);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(65, 13);
             this.labelControl13.TabIndex = 22;
@@ -226,15 +263,25 @@ namespace hamzITech.FormProject
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(210, 123);
+            this.labelControl14.Location = new System.Drawing.Point(210, 154);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(25, 13);
             this.labelControl14.TabIndex = 21;
             this.labelControl14.Text = "Shelf";
             // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(312, 126);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(65, 13);
+            this.labelControl16.TabIndex = 14;
+            this.labelControl16.Text = "Purchase Tax";
+            // 
             // txtreorderQty
             // 
-            this.txtreorderQty.Location = new System.Drawing.Point(77, 120);
+            this.txtreorderQty.Location = new System.Drawing.Point(77, 151);
             this.txtreorderQty.Name = "txtreorderQty";
             this.txtreorderQty.Properties.BeepOnError = false;
             this.txtreorderQty.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -247,7 +294,7 @@ namespace hamzITech.FormProject
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(310, 123);
+            this.labelControl9.Location = new System.Drawing.Point(310, 154);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(66, 13);
             this.labelControl9.TabIndex = 14;
@@ -255,15 +302,23 @@ namespace hamzITech.FormProject
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(452, 97);
+            this.labelControl11.Location = new System.Drawing.Point(452, 101);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(44, 13);
             this.labelControl11.TabIndex = 18;
             this.labelControl11.Text = "Strip Unit";
             // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(457, 126);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(41, 13);
+            this.labelControl15.TabIndex = 13;
+            this.labelControl15.Text = "Alt Code";
+            // 
             // txtPurchaseDiscount
             // 
-            this.txtPurchaseDiscount.Location = new System.Drawing.Point(382, 120);
+            this.txtPurchaseDiscount.Location = new System.Drawing.Point(382, 151);
             this.txtPurchaseDiscount.Name = "txtPurchaseDiscount";
             this.txtPurchaseDiscount.Properties.BeepOnError = false;
             this.txtPurchaseDiscount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -271,10 +326,11 @@ namespace hamzITech.FormProject
             this.txtPurchaseDiscount.Properties.MaskSettings.Set("mask", "f");
             this.txtPurchaseDiscount.Size = new System.Drawing.Size(64, 20);
             this.txtPurchaseDiscount.TabIndex = 11;
+            this.txtPurchaseDiscount.EditValueChanged += new System.EventHandler(this.txtPurchaseDiscount_EditValueChanged);
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(455, 123);
+            this.labelControl10.Location = new System.Drawing.Point(455, 154);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(41, 13);
             this.labelControl10.TabIndex = 13;
@@ -282,26 +338,37 @@ namespace hamzITech.FormProject
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(321, 97);
+            this.labelControl12.Location = new System.Drawing.Point(321, 101);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(55, 13);
             this.labelControl12.TabIndex = 17;
             this.labelControl12.Text = "Corton Unit";
             // 
+            // txtAltCode
+            // 
+            this.txtAltCode.Location = new System.Drawing.Point(501, 123);
+            this.txtAltCode.Name = "txtAltCode";
+            this.txtAltCode.Properties.BeepOnError = false;
+            this.txtAltCode.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtAltCode.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtAltCode.Properties.MaskSettings.Set("mask", "d");
+            this.txtAltCode.Size = new System.Drawing.Size(73, 20);
+            this.txtAltCode.TabIndex = 8;
+            // 
             // txtStripQty
             // 
-            this.txtStripQty.Location = new System.Drawing.Point(501, 94);
+            this.txtStripQty.Location = new System.Drawing.Point(501, 98);
             this.txtStripQty.Name = "txtStripQty";
             this.txtStripQty.Properties.BeepOnError = false;
             this.txtStripQty.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtStripQty.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             this.txtStripQty.Properties.MaskSettings.Set("mask", "d");
-            this.txtStripQty.Size = new System.Drawing.Size(71, 20);
+            this.txtStripQty.Size = new System.Drawing.Size(73, 20);
             this.txtStripQty.TabIndex = 8;
             // 
             // txtCortonQty
             // 
-            this.txtCortonQty.Location = new System.Drawing.Point(382, 94);
+            this.txtCortonQty.Location = new System.Drawing.Point(382, 98);
             this.txtCortonQty.Name = "txtCortonQty";
             this.txtCortonQty.Properties.BeepOnError = false;
             this.txtCortonQty.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -312,23 +379,34 @@ namespace hamzITech.FormProject
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(181, 97);
+            this.labelControl8.Location = new System.Drawing.Point(181, 101);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(54, 13);
+            this.labelControl8.Size = new System.Drawing.Size(60, 13);
             this.labelControl8.TabIndex = 10;
-            this.labelControl8.Text = "Trade Price";
+            this.labelControl8.Text = "Trade Price*";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(16, 97);
+            this.labelControl7.Location = new System.Drawing.Point(16, 101);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(53, 13);
+            this.labelControl7.Size = new System.Drawing.Size(59, 13);
             this.labelControl7.TabIndex = 9;
-            this.labelControl7.Text = "Retail Price";
+            this.labelControl7.Text = "Retail Price*";
+            // 
+            // txtAdditionTax
+            // 
+            this.txtAdditionTax.Location = new System.Drawing.Point(246, 123);
+            this.txtAdditionTax.Name = "txtAdditionTax";
+            this.txtAdditionTax.Properties.BeepOnError = false;
+            this.txtAdditionTax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtAdditionTax.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtAdditionTax.Properties.MaskSettings.Set("mask", "f");
+            this.txtAdditionTax.Size = new System.Drawing.Size(53, 20);
+            this.txtAdditionTax.TabIndex = 6;
             // 
             // txttradePrice
             // 
-            this.txttradePrice.Location = new System.Drawing.Point(246, 94);
+            this.txttradePrice.Location = new System.Drawing.Point(246, 98);
             this.txttradePrice.Name = "txttradePrice";
             this.txttradePrice.Properties.BeepOnError = false;
             this.txttradePrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -359,9 +437,9 @@ namespace hamzITech.FormProject
             // 
             this.labelControl6.Location = new System.Drawing.Point(147, 42);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(26, 13);
+            this.labelControl6.Size = new System.Drawing.Size(32, 13);
             this.labelControl6.TabIndex = 5;
-            this.labelControl6.Text = "Store";
+            this.labelControl6.Text = "Store*";
             // 
             // ddlStore
             // 
@@ -407,9 +485,31 @@ namespace hamzITech.FormProject
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
+            // txtPurchaseTax
+            // 
+            this.txtPurchaseTax.Location = new System.Drawing.Point(382, 124);
+            this.txtPurchaseTax.Name = "txtPurchaseTax";
+            this.txtPurchaseTax.Properties.BeepOnError = false;
+            this.txtPurchaseTax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtPurchaseTax.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtPurchaseTax.Properties.MaskSettings.Set("mask", "f");
+            this.txtPurchaseTax.Size = new System.Drawing.Size(64, 20);
+            this.txtPurchaseTax.TabIndex = 5;
+            // 
+            // txtSaleTax
+            // 
+            this.txtSaleTax.Location = new System.Drawing.Point(76, 123);
+            this.txtSaleTax.Name = "txtSaleTax";
+            this.txtSaleTax.Properties.BeepOnError = false;
+            this.txtSaleTax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtSaleTax.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtSaleTax.Properties.MaskSettings.Set("mask", "f");
+            this.txtSaleTax.Size = new System.Drawing.Size(64, 20);
+            this.txtSaleTax.TabIndex = 5;
+            // 
             // txtretailPrice
             // 
-            this.txtretailPrice.Location = new System.Drawing.Point(77, 94);
+            this.txtretailPrice.Location = new System.Drawing.Point(77, 98);
             this.txtretailPrice.Name = "txtretailPrice";
             this.txtretailPrice.Properties.BeepOnError = false;
             this.txtretailPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -445,27 +545,27 @@ namespace hamzITech.FormProject
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(16, 14);
+            this.labelControl4.Location = new System.Drawing.Point(24, 15);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(45, 13);
+            this.labelControl4.Size = new System.Drawing.Size(51, 13);
             this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Company";
+            this.labelControl4.Text = "Company*";
             // 
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(16, 75);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(53, 13);
+            this.labelControl2.Size = new System.Drawing.Size(59, 13);
             this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "Description";
+            this.labelControl2.Text = "Description*";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 42);
+            this.labelControl1.Location = new System.Drawing.Point(37, 42);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(32, 13);
+            this.labelControl1.Size = new System.Drawing.Size(38, 13);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "ItemId";
+            this.labelControl1.Text = "ItemId*";
             // 
             // ddlCompany
             // 
@@ -499,7 +599,6 @@ namespace hamzITech.FormProject
             // 
             // btnClear
             // 
-            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.ImageOptions.Image")));
             this.btnClear.Location = new System.Drawing.Point(240, 0);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(61, 23);
@@ -510,7 +609,6 @@ namespace hamzITech.FormProject
             // 
             // btnClose
             // 
-            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.Location = new System.Drawing.Point(179, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
@@ -521,7 +619,6 @@ namespace hamzITech.FormProject
             // 
             // btnSave
             // 
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.Location = new System.Drawing.Point(91, 0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(89, 23);
@@ -532,7 +629,6 @@ namespace hamzITech.FormProject
             // 
             // btnsaveandNew
             // 
-            this.btnsaveandNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsaveandNew.ImageOptions.Image")));
             this.btnsaveandNew.Location = new System.Drawing.Point(-1, 0);
             this.btnsaveandNew.Name = "btnsaveandNew";
             this.btnsaveandNew.Size = new System.Drawing.Size(93, 23);
@@ -547,7 +643,7 @@ namespace hamzITech.FormProject
             // 
             // gvdItemDiscount
             // 
-            this.gvdItemDiscount.Location = new System.Drawing.Point(4, 184);
+            this.gvdItemDiscount.Location = new System.Drawing.Point(4, 216);
             this.gvdItemDiscount.MainView = this.gridView1;
             this.gvdItemDiscount.Name = "gvdItemDiscount";
             this.gvdItemDiscount.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -558,7 +654,7 @@ namespace hamzITech.FormProject
             this.repositoryItemDateEdit1,
             this.repositoryItemDateEdit2,
             this.repositoryItemGridLookUpEdit2});
-            this.gvdItemDiscount.Size = new System.Drawing.Size(591, 195);
+            this.gvdItemDiscount.Size = new System.Drawing.Size(591, 162);
             this.gvdItemDiscount.TabIndex = 2;
             this.gvdItemDiscount.UseEmbeddedNavigator = true;
             this.gvdItemDiscount.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -746,7 +842,6 @@ namespace hamzITech.FormProject
             this.Controls.Add(this.gvdItemDiscount);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Item.IconOptions.Image")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -764,8 +859,10 @@ namespace hamzITech.FormProject
             ((System.ComponentModel.ISupportInitialize)(this.txtDiscount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtreorderQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurchaseDiscount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAltCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStripQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCortonQty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAdditionTax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttradePrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlPackingType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
@@ -773,6 +870,8 @@ namespace hamzITech.FormProject
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddlCatagory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPurchaseTax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleTax.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtretailPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemId.Properties)).EndInit();
@@ -864,5 +963,13 @@ namespace hamzITech.FormProject
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit2;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit2View;
         private DevExpress.XtraEditors.SimpleButton btnClear;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.TextEdit txtAltCode;
+        private DevExpress.XtraEditors.TextEdit txtSaleTax;
+        private DevExpress.XtraEditors.TextEdit txtAdditionTax;
+        private DevExpress.XtraEditors.TextEdit txtPurchaseTax;
     }
 }

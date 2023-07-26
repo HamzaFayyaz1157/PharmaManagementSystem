@@ -12,6 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Grid;
+using hamzITech.Project.DataAccessLayer;
+using Microsoft.Extensions.Logging;
 
 namespace hamzITech.FormProject
 {
@@ -19,7 +21,11 @@ namespace hamzITech.FormProject
     {
         // gvdItemDiscount gvdItem 
         DataSet ds = new DataSet();
+        
+
+        private readonly ILogger _logger;
         ItemService Itemservice = new ItemService();
+        string ExcepMesg = "";
         public Item()
         {
 
@@ -68,9 +74,19 @@ namespace hamzITech.FormProject
                 dxErrorProvider1.SetError(txttradePrice, "Trade Price is Required");
                 return;
             }
-            Save();
-            ResetControl();
-            LoadId();
+            try
+            {
+
+                Save();
+                ResetControl();
+                LoadId();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+                //MessageBox.Show("","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+
 
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -101,72 +117,125 @@ namespace hamzITech.FormProject
 
             if (string.IsNullOrEmpty(txtretailPrice.Text.Trim()))
             {
-                dxErrorProvider1.SetError(txtDescription, "Retail Price is Required");
+                dxErrorProvider1.SetError(txtretailPrice, "Retail Price is Required");
                 return;
             }
             if (string.IsNullOrEmpty(txttradePrice.Text.Trim()))
             {
-                dxErrorProvider1.SetError(txtDescription, "Trade Price is Required");
+                dxErrorProvider1.SetError(txttradePrice, "Trade Price is Required");
                 return;
             }
+
             Save();
             this.Close();
         }
         public void LoadId()
         {
-            var Response = Itemservice.GetId();
-            txtItemId.Text = Response.obj.ToString();
-        }
-
-        public void Save()
-        {
-            ItemModel Item = new ItemModel();
-            Item.ItemId = Convert.ToInt32(txtItemId.Text);
-            Item.CompanyId = (int?)ddlCompany.EditValue;
-            Item.CategoryId = (int?)ddlCatagory.EditValue;
-            Item.IsDiscount = txtDiscount.SelectedIndex;
-            Item.StoreId = (int)ddlStore.EditValue;
-            Item.PakingTypeId = (int?)ddlPackingType.EditValue;
-            Item.Description = txtDescription.Text;
-            Item.RetailPrice = Convert.ToDecimal(txtretailPrice.Text);
-            Item.TradePrice = Convert.ToDecimal(txttradePrice.Text);
-            Item.CortonUnit = Convert.ToInt32(txtCortonQty.EditValue ?? null);
-            Item.Strip = Convert.ToInt32(txtStripQty.EditValue);
-            Item.ReOrderQty = Convert.ToInt32(txtreorderQty.EditValue);
-            Item.Shelf = txtShelf.Text;
-            Item.PurchaseDiscount = Convert.ToInt32(txtPurchaseDiscount.EditValue);
-            Item.IsDiscount = txtDiscount.SelectedIndex;
-
-
-            Itemservice.Save(Item);
-            if (Item.IsDiscount == 1)
+            
+            var    response = Itemservice.GetId();
+                //txtItemId.Text = response.obj.ToString();
+            if (response.LogLevel.ToString() == "Error")
             {
-                ItemDiscountModel Discount = new ItemDiscountModel();
-                for (int i = 0; i < gridView1.RowCount; i++)
-                {
-                    DataRow row = gridView1.GetDataRow(i);
-                    if (row != null)
-                    {
-
-                        string DiscountType = row.ItemArray[0].ToString();
-                        if (DiscountType == "Value")
-                            Discount.DiscountType = 0;
-                        else if (DiscountType == "Percentage")
-                            Discount.DiscountType = 1;
-                        Discount.ItemId = Item.ItemId;
-                        Discount.TargetQty = Convert.ToInt32(row.ItemArray[3]);
-                        Discount.Percentage = Convert.ToDecimal(row.ItemArray[1].ToString());
-                        Discount.Value = Convert.ToDecimal(row.ItemArray[2].ToString());
-                        Discount.StartDate = Convert.ToDateTime(row.ItemArray[4]);
-                        Discount.EndDate = Convert.ToDateTime(row.ItemArray[5]);
-                        Discount.Remarks = row.ItemArray[6].ToString();
-                    }
-                    
-                }
-                Itemservice.SaveDiscount(Discount);
-
+                MessageBox.Show(response.obj.ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
             }
+            else
+            {
+                txtItemId.Text = response.obj.ToString();
+            }
+            
+
+
         }
+
+        public ResponseViewModel Save()
+        {
+            //var response = new ResponseViewModel();
+            
+                ItemModel Item = new ItemModel();
+                Item.ItemId = Convert.ToInt32(txtItemId.Text);
+                Item.CompanyId = (int?)ddlCompany.EditValue;
+                Item.CategoryId = (int?)ddlCatagory.EditValue;
+                Item.IsDiscount = txtDiscount.SelectedIndex;
+                Item.StoreId = (int)ddlStore.EditValue;
+                Item.PakingTypeId = (int?)ddlPackingType.EditValue;
+                Item.Description = txtDescription.Text;
+                Item.RetailPrice = Convert.ToDecimal(txtretailPrice.Text);
+                Item.SaleTax = Convert.ToDecimal(txtSaleTax.Text == "" ? null : txtSaleTax.Text);
+                Item.AdditionTax = Convert.ToDecimal(txtAdditionTax.Text == "" ? null : txtAdditionTax.Text);
+                Item.PurchaseTax = Convert.ToDecimal(txtPurchaseTax.Text == "" ? null : txtPurchaseTax.Text);
+                Item.AltCode = Convert.ToInt32(txtAltCode.Text == "" ? null : txtAltCode.Text);
+                Item.TradePrice = Convert.ToDecimal(txttradePrice.Text);
+                Item.CortonUnit = Convert.ToInt32(txtCortonQty.EditValue ?? null);
+                Item.Strip = Convert.ToInt32(txtStripQty.EditValue);
+                Item.ReOrderQty = Convert.ToInt32(txtreorderQty.EditValue);
+                Item.Shelf = txtShelf.Text;
+                Item.PurchaseDiscount = Convert.ToInt32(txtPurchaseDiscount.EditValue);
+                Item.IsDiscount = txtDiscount.SelectedIndex;
+
+
+                var response = Itemservice.Save(Item);
+            if(response.LogLevel.ToString() =="Error")
+            {
+                MessageBox.Show("Error");
+                return response;
+            }
+           // _logger.Log(response.LogLevel, response.Message);
+            return response;
+            //_logger.Log(response.LogLevel, response.Message);
+            //return StatusCode((int)response.Status, response.obj);
+            //return StatusCode((int)response.Status, response.obj);
+
+            //ExcepMesg =  response.obj.ToString();
+            //    if (ExcepMesg == "Saved")
+            //{
+            //    MessageBox.Show(ExcepMesg);
+
+            //}
+            //    else
+            //{
+            //    MessageBox.Show("SomeThing is wrong");
+            //    return response;
+            //}
+
+
+
+            //if (Item.IsDiscount == 1)
+            //{
+            //    ItemDiscountModel Discount = new ItemDiscountModel();
+            //    for (int i = 0; i < gridView1.RowCount; i++)
+            //    {
+            //        DataRow row = gridView1.GetDataRow(i);
+            //        if (row != null)
+            //        {
+
+            //            string DiscountType = row.ItemArray[0].ToString();
+            //            if (DiscountType == "Value")
+            //                Discount.DiscountType = 0;
+            //            else if (DiscountType == "Percentage")
+            //                Discount.DiscountType = 1;
+            //            Discount.ItemId = Item.ItemId;
+            //            Discount.TargetQty = Convert.ToInt32(row.ItemArray[3]);
+            //            Discount.Percentage = Convert.ToDecimal(row.ItemArray[1].ToString());
+            //            Discount.Value = Convert.ToDecimal(row.ItemArray[2].ToString());
+            //            Discount.StartDate = Convert.ToDateTime(row.ItemArray[4]);
+            //            Discount.EndDate = Convert.ToDateTime(row.ItemArray[5]);
+            //            Discount.Remarks = row.ItemArray[6].ToString();
+            //        }
+
+            //    }
+            //    Itemservice.SaveDiscount(Discount);
+
+
+            //}
+
+
+
+        }
+
+
+
+
         public void ResetControl()
         {
 
@@ -180,6 +249,10 @@ namespace hamzITech.FormProject
             txtretailPrice.Text = "";
             txttradePrice.Text = "";
             txtCortonQty.Text = "";
+            txtSaleTax.Text = "";
+            txtAdditionTax.Text = "";
+            txtPurchaseTax.Text = "";
+            txtAltCode.Text = "";
             txtStripQty.Text = "";
             txtreorderQty.Text = "";
             txtPurchaseDiscount.Text = "";
@@ -332,8 +405,8 @@ namespace hamzITech.FormProject
         //            gridView1.Columns[2].OptionsColumn.TabStop = false;
 
         //        }
-                
-                
+
+
 
         //        gridView1.Columns[3].OptionsColumn.ReadOnly = false;
         //        gridView1.Columns[3].OptionsColumn.AllowFocus = true;
@@ -363,12 +436,12 @@ namespace hamzITech.FormProject
         {
             GridView view = sender as GridView;
             string DiscountType = view.GetRowCellValue(e.RowHandle, gvdDiscountType).ToString();
-            if(DiscountType == "")
+            if (DiscountType == "")
             {
                 e.Valid = false;
                 view.SetColumnError(gvdDiscountType, "DiscountType is required");
             }
-            if(e.Valid)
+            if (e.Valid)
             {
                 view.ClearColumnErrors();
             }
@@ -378,8 +451,8 @@ namespace hamzITech.FormProject
         //private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         //{
         //    GridView view = sender as GridView;
-            
-            
+
+
         //    if(gridView1.RowCount >= 2)
         //    {
         //        for (int i = 0; i < gridView1.RowCount; i++)
@@ -443,7 +516,7 @@ namespace hamzITech.FormProject
         //                gridView1.Columns[2].OptionsColumn.TabStop = false;
         //            }
         //        }
-            
+
         //}
 
         private void gridView1_ShowingEditor(object sender, CancelEventArgs e)
@@ -454,6 +527,13 @@ namespace hamzITech.FormProject
             //    view.Columns[1].OptionsColumn.ReadOnly = rea
             //}
         }
+
+        private void txtPurchaseDiscount_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        
         //private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         //{
         //    for (int i = 0; i < gridView1.RowCount; i++)
