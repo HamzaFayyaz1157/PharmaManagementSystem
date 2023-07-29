@@ -29,6 +29,8 @@ namespace hamzITech.FormProject.Purchase.Purchase
         /// </summary>
         private void InitializeComponent()
         {
+            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.repositoryItemSearchLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.repositoryItemDateEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
@@ -49,21 +51,19 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdPurchaseInvoice = new DevExpress.XtraGrid.GridControl();
             this.grdPurchase = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gvdItemId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gvdDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSearchLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gvdprodItemId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gvdprodDescription = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gvdprodpurchaseRate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gvdprodpurchaseDiscount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvdExpiryDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.gvdPurchaseQty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvdPurchaseRate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvdSaleRate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvdPurchaseTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvdadditionalTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gvdTotalPurAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvdDescription = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemSearchLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -81,9 +81,24 @@ namespace hamzITech.FormProject.Purchase.Purchase
             ((System.ComponentModel.ISupportInitialize)(this.grdPurchase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // repositoryItemDateEdit3
+            // 
+            this.repositoryItemDateEdit3.AutoHeight = false;
+            this.repositoryItemDateEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
+            // 
+            // repositoryItemSearchLookUpEdit2
+            // 
+            this.repositoryItemSearchLookUpEdit2.AutoHeight = false;
+            this.repositoryItemSearchLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSearchLookUpEdit2.Name = "repositoryItemSearchLookUpEdit2";
+            this.repositoryItemSearchLookUpEdit2.NullText = "";
             // 
             // repositoryItemComboBox2
             // 
@@ -250,32 +265,33 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdPurchaseInvoice.MainView = this.grdPurchase;
             this.gvdPurchaseInvoice.Name = "gvdPurchaseInvoice";
             this.gvdPurchaseInvoice.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemSearchLookUpEdit1,
-            this.repositoryItemDateEdit3});
+            this.repositoryItemSearchLookUpEdit1});
             this.gvdPurchaseInvoice.Size = new System.Drawing.Size(779, 408);
             this.gvdPurchaseInvoice.TabIndex = 12;
             this.gvdPurchaseInvoice.UseEmbeddedNavigator = true;
             this.gvdPurchaseInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdPurchase});
+            this.gvdPurchaseInvoice.Click += new System.EventHandler(this.gvdPurchaseInvoice_Click);
             // 
             // grdPurchase
             // 
             this.grdPurchase.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gvdItemId,
-            this.gvdDescription,
             this.gvdExpiryDate,
             this.gvdPurchaseQty,
             this.gvdPurchaseRate,
             this.gvdSaleRate,
             this.gvdPurchaseTax,
             this.gvdadditionalTax,
-            this.gvdTotalPurAmount});
+            this.gvdTotalPurAmount,
+            this.gvdDescription});
             this.grdPurchase.GridControl = this.gvdPurchaseInvoice;
             this.grdPurchase.Name = "grdPurchase";
             this.grdPurchase.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseDownFocused;
             this.grdPurchase.OptionsView.ColumnAutoWidth = false;
             this.grdPurchase.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.grdPurchase.OptionsView.ShowGroupPanel = false;
+            this.grdPurchase.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.grdPurchase_CellValueChanged);
             // 
             // gvdItemId
             // 
@@ -284,69 +300,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdItemId.Name = "gvdItemId";
             this.gvdItemId.Visible = true;
             this.gvdItemId.VisibleIndex = 0;
-            this.gvdItemId.Width = 59;
-            // 
-            // gvdDescription
-            // 
-            this.gvdDescription.Caption = "Description";
-            this.gvdDescription.ColumnEdit = this.repositoryItemSearchLookUpEdit1;
-            this.gvdDescription.Name = "gvdDescription";
-            this.gvdDescription.Visible = true;
-            this.gvdDescription.VisibleIndex = 1;
-            this.gvdDescription.Width = 202;
-            // 
-            // repositoryItemSearchLookUpEdit1
-            // 
-            this.repositoryItemSearchLookUpEdit1.AutoHeight = false;
-            this.repositoryItemSearchLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSearchLookUpEdit1.Name = "repositoryItemSearchLookUpEdit1";
-            this.repositoryItemSearchLookUpEdit1.NullText = "";
-            this.repositoryItemSearchLookUpEdit1.PopupView = this.repositoryItemSearchLookUpEdit1View;
-            // 
-            // repositoryItemSearchLookUpEdit1View
-            // 
-            this.repositoryItemSearchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gvdprodItemId,
-            this.gvdprodDescription,
-            this.gvdprodpurchaseRate,
-            this.gvdprodpurchaseDiscount});
-            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
-            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // gvdprodItemId
-            // 
-            this.gvdprodItemId.Caption = "ItemId";
-            this.gvdprodItemId.FieldName = "ItemId";
-            this.gvdprodItemId.Name = "gvdprodItemId";
-            this.gvdprodItemId.Visible = true;
-            this.gvdprodItemId.VisibleIndex = 0;
-            // 
-            // gvdprodDescription
-            // 
-            this.gvdprodDescription.Caption = "Description";
-            this.gvdprodDescription.FieldName = "Description";
-            this.gvdprodDescription.Name = "gvdprodDescription";
-            this.gvdprodDescription.Visible = true;
-            this.gvdprodDescription.VisibleIndex = 1;
-            // 
-            // gvdprodpurchaseRate
-            // 
-            this.gvdprodpurchaseRate.Caption = "Purchase Rate";
-            this.gvdprodpurchaseRate.FieldName = "RetailPrice";
-            this.gvdprodpurchaseRate.Name = "gvdprodpurchaseRate";
-            this.gvdprodpurchaseRate.Visible = true;
-            this.gvdprodpurchaseRate.VisibleIndex = 2;
-            // 
-            // gvdprodpurchaseDiscount
-            // 
-            this.gvdprodpurchaseDiscount.Caption = "purchase Discount";
-            this.gvdprodpurchaseDiscount.FieldName = "PurchaseDiscount";
-            this.gvdprodpurchaseDiscount.Name = "gvdprodpurchaseDiscount";
-            this.gvdprodpurchaseDiscount.Visible = true;
-            this.gvdprodpurchaseDiscount.VisibleIndex = 3;
+            this.gvdItemId.Width = 46;
             // 
             // gvdExpiryDate
             // 
@@ -356,16 +310,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdExpiryDate.Name = "gvdExpiryDate";
             this.gvdExpiryDate.Visible = true;
             this.gvdExpiryDate.VisibleIndex = 2;
-            this.gvdExpiryDate.Width = 81;
-            // 
-            // repositoryItemDateEdit3
-            // 
-            this.repositoryItemDateEdit3.AutoHeight = false;
-            this.repositoryItemDateEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
+            this.gvdExpiryDate.Width = 68;
             // 
             // gvdPurchaseQty
             // 
@@ -403,7 +348,6 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdPurchaseTax.Name = "gvdPurchaseTax";
             this.gvdPurchaseTax.Visible = true;
             this.gvdPurchaseTax.VisibleIndex = 6;
-            this.gvdPurchaseTax.Width = 51;
             // 
             // gvdadditionalTax
             // 
@@ -412,6 +356,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdadditionalTax.Name = "gvdadditionalTax";
             this.gvdadditionalTax.Visible = true;
             this.gvdadditionalTax.VisibleIndex = 7;
+            this.gvdadditionalTax.Width = 77;
             // 
             // gvdTotalPurAmount
             // 
@@ -420,7 +365,33 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdTotalPurAmount.Name = "gvdTotalPurAmount";
             this.gvdTotalPurAmount.Visible = true;
             this.gvdTotalPurAmount.VisibleIndex = 8;
-            this.gvdTotalPurAmount.Width = 67;
+            this.gvdTotalPurAmount.Width = 80;
+            // 
+            // gvdDescription
+            // 
+            this.gvdDescription.Caption = "Item Description";
+            this.gvdDescription.ColumnEdit = this.repositoryItemSearchLookUpEdit1;
+            this.gvdDescription.FieldName = "Description";
+            this.gvdDescription.Name = "gvdDescription";
+            this.gvdDescription.Visible = true;
+            this.gvdDescription.VisibleIndex = 1;
+            this.gvdDescription.Width = 187;
+            // 
+            // repositoryItemSearchLookUpEdit1
+            // 
+            this.repositoryItemSearchLookUpEdit1.AutoHeight = false;
+            this.repositoryItemSearchLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSearchLookUpEdit1.Name = "repositoryItemSearchLookUpEdit1";
+            this.repositoryItemSearchLookUpEdit1.NullText = "";
+            this.repositoryItemSearchLookUpEdit1.PopupView = this.repositoryItemSearchLookUpEdit1View;
+            // 
+            // repositoryItemSearchLookUpEdit1View
+            // 
+            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
+            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // Purchase
             // 
@@ -439,6 +410,9 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.Controls.Add(this.panelControl2);
             this.Name = "Purchase";
             this.Text = "Purchase";
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
@@ -456,8 +430,6 @@ namespace hamzITech.FormProject.Purchase.Purchase
             ((System.ComponentModel.ISupportInitialize)(this.grdPurchase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,7 +454,6 @@ namespace hamzITech.FormProject.Purchase.Purchase
         private DevExpress.XtraGrid.GridControl gvdPurchaseInvoice;
         private DevExpress.XtraGrid.Views.Grid.GridView grdPurchase;
         private DevExpress.XtraGrid.Columns.GridColumn gvdItemId;
-        private DevExpress.XtraGrid.Columns.GridColumn gvdDescription;
         private DevExpress.XtraGrid.Columns.GridColumn gvdExpiryDate;
         private DevExpress.XtraGrid.Columns.GridColumn gvdPurchaseQty;
         private DevExpress.XtraGrid.Columns.GridColumn gvdPurchaseRate;
@@ -493,12 +464,10 @@ namespace hamzITech.FormProject.Purchase.Purchase
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit2;
         private DevExpress.XtraGrid.Columns.GridColumn gvdPurchaseTax;
         private DevExpress.XtraGrid.Columns.GridColumn gvdadditionalTax;
+        private DevExpress.XtraGrid.Columns.GridColumn gvdDescription;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit1;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
-        private DevExpress.XtraGrid.Columns.GridColumn gvdprodItemId;
-        private DevExpress.XtraGrid.Columns.GridColumn gvdprodDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn gvdprodpurchaseRate;
-        private DevExpress.XtraGrid.Columns.GridColumn gvdprodpurchaseDiscount;
-        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit3;
     }
 }

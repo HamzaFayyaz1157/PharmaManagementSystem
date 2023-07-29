@@ -9,21 +9,23 @@ namespace hamzITech.Project.models
     public class PurchaseModel : BaseModel
     {
         public int PurchaseId { get; set; }
-        public int? PakingTypeId { get; set; }
-        public int StoreId { get; set; }
-        public int? CategoryId { get; set; }
-        public int? ReOrderQty { get; set; }
-        public string Rack { get; set; }
-        public int? Strip { get; set; }
-        public string Shelf { get; set; }
+        public DateTime PurchaseDate { get; set; }
+        public int VendorId { get; set; }
+        public string Remarks { get; set; }
+        public int? StatusId { get; set; }
 
 
-        public int? CortonUnit { get; set; }
-        public int? CompanyId { get; set; }
-        public string Description { get; set; }
-        public decimal? RetailPrice { get; set; }
-        public decimal? TradePrice { get; set; }
-        public int? IsDiscount { get; set; }
-        public decimal? PurchaseDiscount { get; set; }
+        public int PurchaseDetailId { get; set; }
+        public int MasterId { get; set; }
+        public int ItemId { get; set; }
+
+
+        public DateTime ExpiryDate { get; set; }
+        public decimal PurchaseQty { get; set; }
+        public decimal PurchaseRate { get; set; }
+        public decimal SaleRate { get; set; }
+        public decimal PurchaseTax { get; set; }
+        public decimal AdditionTax { get; set; }
+        public decimal TotalAmount { get; set; }
     }
 }
