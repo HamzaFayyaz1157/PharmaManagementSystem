@@ -137,67 +137,75 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.panelControl2.Controls.Add(this.btnsaveandNew);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(778, 23);
+            this.panelControl2.Size = new System.Drawing.Size(1167, 34);
             this.panelControl2.TabIndex = 2;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(240, 0);
+            this.btnClear.Location = new System.Drawing.Point(360, 0);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(61, 23);
+            this.btnClear.Size = new System.Drawing.Size(92, 34);
             this.btnClear.TabIndex = 4;
             this.btnClear.TabStop = false;
             this.btnClear.Text = "Clear";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(179, 0);
+            this.btnClose.Location = new System.Drawing.Point(268, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(61, 23);
+            this.btnClose.Size = new System.Drawing.Size(92, 34);
             this.btnClose.TabIndex = 3;
             this.btnClose.TabStop = false;
             this.btnClose.Text = "Close";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(91, 0);
+            this.btnSave.Location = new System.Drawing.Point(136, 0);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(89, 23);
+            this.btnSave.Size = new System.Drawing.Size(134, 34);
             this.btnSave.TabIndex = 2;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Save && Close";
             // 
             // btnsaveandNew
             // 
-            this.btnsaveandNew.Location = new System.Drawing.Point(-1, 0);
+            this.btnsaveandNew.Location = new System.Drawing.Point(-2, 0);
+            this.btnsaveandNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnsaveandNew.Name = "btnsaveandNew";
-            this.btnsaveandNew.Size = new System.Drawing.Size(93, 23);
+            this.btnsaveandNew.Size = new System.Drawing.Size(140, 34);
             this.btnsaveandNew.TabIndex = 1;
             this.btnsaveandNew.TabStop = false;
             this.btnsaveandNew.Text = " Save && New";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(45, 63);
+            this.labelControl4.Location = new System.Drawing.Point(68, 92);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(34, 13);
+            this.labelControl4.Size = new System.Drawing.Size(51, 19);
             this.labelControl4.TabIndex = 3;
             this.labelControl4.Text = "Vendor";
             // 
             // ddlVendor
             // 
-            this.ddlVendor.Location = new System.Drawing.Point(85, 60);
+            this.ddlVendor.Location = new System.Drawing.Point(128, 88);
+            this.ddlVendor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ddlVendor.Name = "ddlVendor";
             this.ddlVendor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ddlVendor.Properties.NullText = "";
             this.ddlVendor.Properties.PopupView = this.searchLookUpEdit1View;
-            this.ddlVendor.Size = new System.Drawing.Size(306, 20);
+            this.ddlVendor.Size = new System.Drawing.Size(459, 27);
             this.ddlVendor.TabIndex = 4;
             // 
             // searchLookUpEdit1View
             // 
+            this.searchLookUpEdit1View.DetailHeight = 512;
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -206,67 +214,75 @@ namespace hamzITech.FormProject.Purchase.Purchase
             // txtdate
             // 
             this.txtdate.EditValue = null;
-            this.txtdate.Location = new System.Drawing.Point(259, 30);
+            this.txtdate.Location = new System.Drawing.Point(388, 44);
+            this.txtdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtdate.Name = "txtdate";
             this.txtdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtdate.Size = new System.Drawing.Size(132, 20);
+            this.txtdate.Size = new System.Drawing.Size(198, 27);
             this.txtdate.TabIndex = 5;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(183, 35);
+            this.labelControl1.Location = new System.Drawing.Point(274, 51);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(70, 13);
+            this.labelControl1.Size = new System.Drawing.Size(100, 19);
             this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Purchase Date";
             // 
             // txtIPurchaseId
             // 
-            this.txtIPurchaseId.Location = new System.Drawing.Point(85, 32);
+            this.txtIPurchaseId.Location = new System.Drawing.Point(128, 47);
+            this.txtIPurchaseId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIPurchaseId.Name = "txtIPurchaseId";
             this.txtIPurchaseId.Properties.ReadOnly = true;
-            this.txtIPurchaseId.Size = new System.Drawing.Size(87, 20);
+            this.txtIPurchaseId.Size = new System.Drawing.Size(130, 27);
             this.txtIPurchaseId.TabIndex = 9;
             this.txtIPurchaseId.TabStop = false;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(22, 35);
+            this.labelControl3.Location = new System.Drawing.Point(33, 51);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(57, 13);
+            this.labelControl3.Size = new System.Drawing.Size(83, 19);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Purchase Id";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(439, 63);
+            this.labelControl7.Location = new System.Drawing.Point(658, 92);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(41, 13);
+            this.labelControl7.Size = new System.Drawing.Size(61, 19);
             this.labelControl7.TabIndex = 11;
             this.labelControl7.Text = "Remarks";
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(486, 60);
+            this.txtRemarks.Location = new System.Drawing.Point(729, 88);
+            this.txtRemarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.BeepOnError = false;
             this.txtRemarks.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtRemarks.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             this.txtRemarks.Properties.MaskSettings.Set("mask", "f");
-            this.txtRemarks.Size = new System.Drawing.Size(280, 20);
+            this.txtRemarks.Size = new System.Drawing.Size(420, 27);
             this.txtRemarks.TabIndex = 10;
             // 
             // gvdPurchaseInvoice
             // 
-            this.gvdPurchaseInvoice.Location = new System.Drawing.Point(0, 96);
+            this.gvdPurchaseInvoice.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gvdPurchaseInvoice.Location = new System.Drawing.Point(0, 140);
             this.gvdPurchaseInvoice.MainView = this.grdPurchase;
+            this.gvdPurchaseInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gvdPurchaseInvoice.Name = "gvdPurchaseInvoice";
             this.gvdPurchaseInvoice.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSearchLookUpEdit1});
-            this.gvdPurchaseInvoice.Size = new System.Drawing.Size(779, 408);
+            this.gvdPurchaseInvoice.Size = new System.Drawing.Size(1168, 596);
             this.gvdPurchaseInvoice.TabIndex = 12;
             this.gvdPurchaseInvoice.UseEmbeddedNavigator = true;
             this.gvdPurchaseInvoice.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -285,6 +301,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdadditionalTax,
             this.gvdTotalPurAmount,
             this.gvdDescription});
+            this.grdPurchase.DetailHeight = 512;
             this.grdPurchase.GridControl = this.gvdPurchaseInvoice;
             this.grdPurchase.Name = "grdPurchase";
             this.grdPurchase.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseDownFocused;
@@ -297,29 +314,32 @@ namespace hamzITech.FormProject.Purchase.Purchase
             // 
             this.gvdItemId.Caption = "ItemId";
             this.gvdItemId.FieldName = "ItemId";
+            this.gvdItemId.MinWidth = 30;
             this.gvdItemId.Name = "gvdItemId";
             this.gvdItemId.Visible = true;
             this.gvdItemId.VisibleIndex = 0;
-            this.gvdItemId.Width = 46;
+            this.gvdItemId.Width = 69;
             // 
             // gvdExpiryDate
             // 
             this.gvdExpiryDate.Caption = "Expiry Date";
             this.gvdExpiryDate.ColumnEdit = this.repositoryItemDateEdit3;
             this.gvdExpiryDate.FieldName = "ExpiryDate";
+            this.gvdExpiryDate.MinWidth = 30;
             this.gvdExpiryDate.Name = "gvdExpiryDate";
             this.gvdExpiryDate.Visible = true;
             this.gvdExpiryDate.VisibleIndex = 2;
-            this.gvdExpiryDate.Width = 68;
+            this.gvdExpiryDate.Width = 102;
             // 
             // gvdPurchaseQty
             // 
             this.gvdPurchaseQty.Caption = "Purchase Qty";
             this.gvdPurchaseQty.FieldName = "PurchaseQty";
+            this.gvdPurchaseQty.MinWidth = 30;
             this.gvdPurchaseQty.Name = "gvdPurchaseQty";
             this.gvdPurchaseQty.Visible = true;
             this.gvdPurchaseQty.VisibleIndex = 3;
-            this.gvdPurchaseQty.Width = 80;
+            this.gvdPurchaseQty.Width = 120;
             // 
             // gvdPurchaseRate
             // 
@@ -327,55 +347,62 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.gvdPurchaseRate.DisplayFormat.FormatString = "d";
             this.gvdPurchaseRate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gvdPurchaseRate.FieldName = "PurchaseRate";
+            this.gvdPurchaseRate.MinWidth = 30;
             this.gvdPurchaseRate.Name = "gvdPurchaseRate";
             this.gvdPurchaseRate.Visible = true;
             this.gvdPurchaseRate.VisibleIndex = 4;
-            this.gvdPurchaseRate.Width = 79;
+            this.gvdPurchaseRate.Width = 118;
             // 
             // gvdSaleRate
             // 
             this.gvdSaleRate.Caption = "Sale Rate";
             this.gvdSaleRate.FieldName = "SaleRate";
+            this.gvdSaleRate.MinWidth = 30;
             this.gvdSaleRate.Name = "gvdSaleRate";
             this.gvdSaleRate.Visible = true;
             this.gvdSaleRate.VisibleIndex = 5;
-            this.gvdSaleRate.Width = 67;
+            this.gvdSaleRate.Width = 100;
             // 
             // gvdPurchaseTax
             // 
             this.gvdPurchaseTax.Caption = "Purchase Tax";
             this.gvdPurchaseTax.FieldName = "PurchaseTax";
+            this.gvdPurchaseTax.MinWidth = 30;
             this.gvdPurchaseTax.Name = "gvdPurchaseTax";
             this.gvdPurchaseTax.Visible = true;
             this.gvdPurchaseTax.VisibleIndex = 6;
+            this.gvdPurchaseTax.Width = 112;
             // 
             // gvdadditionalTax
             // 
             this.gvdadditionalTax.Caption = "Additional Tax";
             this.gvdadditionalTax.FieldName = "AdditionTax";
+            this.gvdadditionalTax.MinWidth = 30;
             this.gvdadditionalTax.Name = "gvdadditionalTax";
             this.gvdadditionalTax.Visible = true;
             this.gvdadditionalTax.VisibleIndex = 7;
-            this.gvdadditionalTax.Width = 77;
+            this.gvdadditionalTax.Width = 115;
             // 
             // gvdTotalPurAmount
             // 
             this.gvdTotalPurAmount.Caption = "Total Amount";
             this.gvdTotalPurAmount.FieldName = "TotalAmount";
+            this.gvdTotalPurAmount.MinWidth = 30;
             this.gvdTotalPurAmount.Name = "gvdTotalPurAmount";
             this.gvdTotalPurAmount.Visible = true;
             this.gvdTotalPurAmount.VisibleIndex = 8;
-            this.gvdTotalPurAmount.Width = 80;
+            this.gvdTotalPurAmount.Width = 133;
             // 
             // gvdDescription
             // 
             this.gvdDescription.Caption = "Item Description";
             this.gvdDescription.ColumnEdit = this.repositoryItemSearchLookUpEdit1;
             this.gvdDescription.FieldName = "Description";
+            this.gvdDescription.MinWidth = 30;
             this.gvdDescription.Name = "gvdDescription";
             this.gvdDescription.Visible = true;
             this.gvdDescription.VisibleIndex = 1;
-            this.gvdDescription.Width = 187;
+            this.gvdDescription.Width = 280;
             // 
             // repositoryItemSearchLookUpEdit1
             // 
@@ -388,6 +415,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
             // 
             // repositoryItemSearchLookUpEdit1View
             // 
+            this.repositoryItemSearchLookUpEdit1View.DetailHeight = 512;
             this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
             this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -395,9 +423,9 @@ namespace hamzITech.FormProject.Purchase.Purchase
             // 
             // Purchase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 516);
+            this.ClientSize = new System.Drawing.Size(1167, 754);
             this.Controls.Add(this.gvdPurchaseInvoice);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.txtRemarks);
@@ -408,6 +436,7 @@ namespace hamzITech.FormProject.Purchase.Purchase
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.ddlVendor);
             this.Controls.Add(this.panelControl2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Purchase";
             this.Text = "Purchase";
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();

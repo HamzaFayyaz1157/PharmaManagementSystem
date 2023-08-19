@@ -38,8 +38,8 @@ namespace hamzITech.Project.serverLayer
                "','" + item.AdditionTax + "','" + item.PurchaseTax + "'," + item.AltCode + "," +
                "'" + item.PakingTypeId + "','" + item.StoreId + "','" + item.CategoryId + "','" + item.ReOrderQty + "'," +
                "'" + item.Strip + "','" + item.IsDiscount + "','" + item.Shelf + "','" + "admin" + "','" + DateTime.Now + "'," + 1 + ")";
-                
-                
+
+
                 DatabaseConnection.InSert(InsertQury);
 
                 response.Status = HttpStatusCode.Created;
@@ -58,69 +58,69 @@ namespace hamzITech.Project.serverLayer
                 response.LogLevel = LogLevel.Error;
                 return response;
             }
-                //SqlCommand cmd = new SqlCommand("Insert into Setup.Item Values (@ItemId,@CompanyId,@Description,@RetailPrice,@TradePrice," +
-                //    "@PurchaseDiscount,@CortonUnit,@SaleTax,@AdditionTax,@PurchaseTax,@AltCode," +
-                // "@PakingTypeId,@StoreId,@CategoryId,@ReOrderQty,@Strip,@IsDiscount,@Shelf," +
-                // "@CreatedBy,@CreatedOn,@UpdateBy,@UpdateOn,@ValidFlag)", con);
+            //SqlCommand cmd = new SqlCommand("Insert into Setup.Item Values (@ItemId,@CompanyId,@Description,@RetailPrice,@TradePrice," +
+            //    "@PurchaseDiscount,@CortonUnit,@SaleTax,@AdditionTax,@PurchaseTax,@AltCode," +
+            // "@PakingTypeId,@StoreId,@CategoryId,@ReOrderQty,@Strip,@IsDiscount,@Shelf," +
+            // "@CreatedBy,@CreatedOn,@UpdateBy,@UpdateOn,@ValidFlag)", con);
 
 
-                //cmd.CommandType = CommandType.Text;
+            //cmd.CommandType = CommandType.Text;
 
 
-                //cmd.Parameters.AddWithValue("@ItemId", item.ItemId);
-                //cmd.Parameters.AddWithValue("@CompanyId", item.CompanyId);
-                //cmd.Parameters.AddWithValue("@Description", item.Description);
-                //cmd.Parameters.AddWithValue("@RetailPrice", item.RetailPrice);
-                //cmd.Parameters.AddWithValue("@TradePrice", item.TradePrice);
-                //cmd.Parameters.AddWithValue("@PurchaseDiscount", item.PurchaseDiscount);
-                //cmd.Parameters.AddWithValue("@CortonUnit", item.CortonUnit);
-                //cmd.Parameters.AddWithValue("@SaleTax", item.SaleTax);
-                //cmd.Parameters.AddWithValue("@AdditionTax", item.AdditionTax);
-                //cmd.Parameters.AddWithValue("@PurchaseTax", item.PurchaseTax);
-                //cmd.Parameters.AddWithValue("@AltCode", item.AltCode);
-                //cmd.Parameters.AddWithValue("@PakingTypeId", item.PakingTypeId);
-                //cmd.Parameters.AddWithValue("@StoreId", item.StoreId);
-                //cmd.Parameters.AddWithValue("@CategoryId", item.CategoryId);
-                //cmd.Parameters.AddWithValue("@ReOrderQty", item.ReOrderQty);
-                //cmd.Parameters.AddWithValue("@Strip", item.Strip);
-                //cmd.Parameters.AddWithValue("@IsDiscount", item.IsDiscount);
-                //cmd.Parameters.AddWithValue("@Shelf", item.Shelf);
-                //cmd.Parameters.AddWithValue("@CreatedBy", "Admin");
-                //cmd.Parameters.AddWithValue("@CreatedOn", DateTime.Now);
-                //cmd.Parameters.AddWithValue("@UpdateBy", null);
-                //cmd.Parameters.AddWithValue("@UpdateOn", null);
-                //cmd.Parameters.AddWithValue("@ValidFlag", true);
+            //cmd.Parameters.AddWithValue("@ItemId", item.ItemId);
+            //cmd.Parameters.AddWithValue("@CompanyId", item.CompanyId);
+            //cmd.Parameters.AddWithValue("@Description", item.Description);
+            //cmd.Parameters.AddWithValue("@RetailPrice", item.RetailPrice);
+            //cmd.Parameters.AddWithValue("@TradePrice", item.TradePrice);
+            //cmd.Parameters.AddWithValue("@PurchaseDiscount", item.PurchaseDiscount);
+            //cmd.Parameters.AddWithValue("@CortonUnit", item.CortonUnit);
+            //cmd.Parameters.AddWithValue("@SaleTax", item.SaleTax);
+            //cmd.Parameters.AddWithValue("@AdditionTax", item.AdditionTax);
+            //cmd.Parameters.AddWithValue("@PurchaseTax", item.PurchaseTax);
+            //cmd.Parameters.AddWithValue("@AltCode", item.AltCode);
+            //cmd.Parameters.AddWithValue("@PakingTypeId", item.PakingTypeId);
+            //cmd.Parameters.AddWithValue("@StoreId", item.StoreId);
+            //cmd.Parameters.AddWithValue("@CategoryId", item.CategoryId);
+            //cmd.Parameters.AddWithValue("@ReOrderQty", item.ReOrderQty);
+            //cmd.Parameters.AddWithValue("@Strip", item.Strip);
+            //cmd.Parameters.AddWithValue("@IsDiscount", item.IsDiscount);
+            //cmd.Parameters.AddWithValue("@Shelf", item.Shelf);
+            //cmd.Parameters.AddWithValue("@CreatedBy", "Admin");
+            //cmd.Parameters.AddWithValue("@CreatedOn", DateTime.Now);
+            //cmd.Parameters.AddWithValue("@UpdateBy", null);
+            //cmd.Parameters.AddWithValue("@UpdateOn", null);
+            //cmd.Parameters.AddWithValue("@ValidFlag", true);
 
 
 
-                //con.Open();
-                //cmd.ExecuteNonQuery();
-                //con.Close();
-                //response.obj = "Saved";
-                //return response;
+            //con.Open();
+            //cmd.ExecuteNonQuery();
+            //con.Close();
+            //response.obj = "Saved";
+            //return response;
         }
         public ResponseViewModel GetId()
         {
             var response = new ResponseViewModel();
             try
-            { 
-            string getID = "";
-            int ID = 0;
-            
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select top 1 ItemId from Setup.Item order by ItemId Desc ", con);
-            SqlDataReader da = cmd.ExecuteReader();
-
-            if (da.Read())
             {
-                getID = da["ItemId"].ToString();
+                string getID = "";
+                int ID = 0;
 
-                ID = Convert.ToInt32(getID);
-                ID++;
-            }
-            else
-                ID = 1;
-            con.Close();
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select top 1 ItemId from Setup.Item order by ItemId Desc ", con);
+                SqlDataReader da = cmd.ExecuteReader();
+
+                if (da.Read())
+                {
+                    getID = da["ItemId"].ToString();
+
+                    ID = Convert.ToInt32(getID);
+                    ID++;
+                }
+                else
+                    ID = 1;
+                con.Close();
 
                 response.Status = HttpStatusCode.Created;
                 response.obj = ID;

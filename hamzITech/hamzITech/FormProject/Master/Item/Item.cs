@@ -23,7 +23,7 @@ namespace hamzITech.FormProject
         DataSet ds = new DataSet();
         
 
-        private readonly ILogger _logger;
+       // private readonly ILogger _logger;
         ItemService Itemservice = new ItemService();
         string ExcepMesg = "";
         public Item()

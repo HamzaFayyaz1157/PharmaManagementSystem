@@ -1,9 +1,10 @@
-﻿using Microsoft.Extensions.Logging;
+﻿
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,6 @@ namespace hamzITech.Project.models
         public string Message { get; set; }
         public object obj { get; set; }
         public LogLevel LogLevel { get; set; }
-        public StreamContent Content { get; set; }
+       // public StreamContent Content { get; set; }
     }
 }
